@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:id="vboxback"
+      style="-fx-background-image: url(image/backgound.jpg); -fx-background-repeat: no-repeat;" alignment="CENTER" xmlns="http://javafx.com/javafx"
+      fx:controller="view.FenetrePrincipale">
+    <Button mnemonicParsing="false" text="Jouer" onAction="#afficherJouer">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+    </Button>
+    <Button mnemonicParsing="false" text="Règles du jeu" onAction="#afficherRegles">
+        <VBox.margin>
+            <Insets top="20.0"/>
+        </VBox.margin>
+    </Button>
+    <Button mnemonicParsing="false" text="Classement" onAction="#afficherClassement">
+        <VBox.margin>
+            <Insets top="20.0"/>
+        </VBox.margin>
+    </Button>
+    <Button mnemonicParsing="false" text="Options" onAction="#afficherOption">
+        <VBox.margin>
+            <Insets top="20.0"/>
+        </VBox.margin>
+    </Button>
+    <Button mnemonicParsing="false" text="Quitter" onAction="#quitter">
+        <VBox.margin>
+            <Insets top="20.0"/>
+        </VBox.margin>
+    </Button>
+</VBox>

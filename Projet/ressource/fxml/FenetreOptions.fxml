@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox fx:id="vboxback" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="view.FenetreOptions">
+      <VBox alignment="CENTER">
+            <Label text="Son :" />
+            <Slider fx:id="sonSlider" showTickLabels="true" />
+            <ProgressIndicator fx:id="sonIndicator" />
+            <Label text="Théme :" />
+            <ComboBox fx:id="comBox" onAction="#getTheme" />
+      </VBox>
+      <Button mnemonicParsing="false" onAction="#valider" text="Valider " textAlignment="CENTER">
+         <VBox.margin>
+            <Insets top="60.0" />
+         </VBox.margin></Button>
+</VBox>

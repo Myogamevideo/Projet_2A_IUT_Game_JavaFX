@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:id="vboxback"
+      alignment="CENTER"
+      style="-fx-background-image: url(image/backgound.jpg); -fx-background-repeat: no-repeat;"
+      xmlns="http://javafx.com/javafx" fx:controller="view.FenetreJeu">
+    <GridPane fx:id="gridplateau" gridLinesVisible="true" style="-fx-background-color: rgba(250,250,210 , 0.5);">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+        </padding>
+    </GridPane>
+    <HBox alignment="CENTER" style="-fx-background-color: rgba(250,250,210 , 0.5);">
+        <VBox>
+            <Label text="Information de la partie :" textAlignment="CENTER"/>
+            <TextArea fx:id="textinfo" editable="false" wrapText="true"/>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+        </VBox>
+        <GridPane gridLinesVisible="true">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <Button mnemonicParsing="false" onAction="#action" prefHeight="200.0" prefWidth="200.0"
+                    text="Attaque"/>
+            <Button mnemonicParsing="false" onAction="#competence" prefHeight="200.0" prefWidth="200.0" disable="true"
+                    GridPane.columnIndex="1" fx:id="buttoncompetence"/>
+            <Button mnemonicParsing="false" onAction="#deplacement" prefHeight="200.0" prefWidth="200.0"
+                    text="Déplacement" GridPane.rowIndex="1"/>
+            <Button mnemonicParsing="false" onAction="#soin" fx:id="buttonsoin" prefHeight="200.0" prefWidth="200.0"
+                    GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        </GridPane>
+        <VBox alignment="CENTER">
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+                <ImageView disable="true" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <StackPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </StackPane.margin>
+                    <Image url="/image/coeur.png"/>
+                </ImageView>
+                <Label fx:id="labelvie"/>
+            </StackPane>
+            <Button mnemonicParsing="false" onAction="#fintour"
+                    style="-fx-background-color: rgba(134,95,23);" text="Fin de tour"/>
+        </VBox>
+        <VBox alignment="CENTER">
+            <HBox alignment="CENTER">
+                <Label fx:id="labelpseudo"/>
+                <Label text=" VS vague "/>
+                <Label fx:id="labelvague"/>
+            </HBox>
+            <Label fx:id="labelnbtour"/>
+            <Label fx:id="labelptmouv"/>
+            <Label fx:id="labelptact"/>
+        </VBox>
+    </HBox>
+</VBox>

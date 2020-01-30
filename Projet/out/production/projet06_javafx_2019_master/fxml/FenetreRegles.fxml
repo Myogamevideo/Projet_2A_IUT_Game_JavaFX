@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:id="vboxback" styleClass="background" xmlns="http://javafx.com/javafx"
+      fx:controller="view.FenetreRegles">
+   <Button mnemonicParsing="false" text="Retour  ↩ " onAction="#retour"/>
+   <VBox>
+      <Label text="Chargement :"/>
+      <TextArea editable="false"
+                text="• Le joueur choisi une classe (Guerrier ou Archer)&#10;• Le joueur choisi un pseudo&#10;• Début de la partie"
+                wrapText="true"/>
+      <Label text="Début de la manche :"/>
+      <TextArea editable="false"
+                text="• Un ennemie et le joueur apparaît sur terrain de jeu &#10;• Les points de vie , points de mouvement , compétence et points d’action sont initialiser en fonction de la classe et de la manche précédente&#10;• Le niveau de l'ennemie en fonction du niveau de vague"
+                wrapText="true"/>
+      <Label text="En cours de la manche :"/>
+      <TextArea editable="false"
+                text="• L’ennemie bouge en fonction de ses points de mouvement aléatoirement (ou intelligemment vers le joueur) et peut attaquer en fonction du type d’ennemie et la proximité du joueur&#10;• Le joueur peut bouger en fonction de ses points de mouvement et peut attaquer en fonction de la classe et la proximité de l’ennemie, il est aussi possible de prendre un soin ou utiliser une compétence"
+                wrapText="true"/>
+      <Label text="Fin de la manche :"/>
+      <TextArea editable="false"
+                text="• Si le joueur a gagné , une nouvelle vague apparaît et le joueur reprend la partie avec le nombre de vie de la manche précédente , mais sans réinitialiser ces soins ni ses compétences et sans changer de pseudo ou de classe&#10;• Si une vague d’ennemie gagne , le joueur reviens à l’écran des scores (classement avec les anciens score des joueur ) , il peut rajouter son score désigne par son pseudo , la classe , le temps de jeu , et le nombre de vague battu"
+                wrapText="true"/>
+   </VBox>
+</VBox>

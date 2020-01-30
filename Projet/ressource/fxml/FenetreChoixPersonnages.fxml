@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:id="vboxback" alignment="CENTER" xmlns="http://javafx.com/javafx"
+      fx:controller="view.FenetreChoixPersonnages">
+      <Button mnemonicParsing="false" onAction="#retour" text="Retour  ↩ "/>
+      <HBox alignment="CENTER">
+         <Label text="Choix du personnage : ">
+            <HBox.margin>
+               <Insets bottom="10.0" left="10.0" top="10.0"/>
+            </HBox.margin>
+         </Label>
+         <Label fx:id="labelpersonnage" style="-fx-font-weight: bold;"/>
+      </HBox>
+      <HBox alignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#setPersonnageGuerrier">
+               <graphic>
+                  <VBox alignment="CENTER" style="-fx-background-color: GRAY;">
+                        <Label text="Guerrier"/>
+                      <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                          <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                          </VBox.margin>
+                          <Image url="@../image/guerrier.png"/>
+                      </ImageView>
+                        <TextArea fx:id="labelguerrier" editable="false" wrapText="true">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                           </VBox.margin>
+                        </TextArea>
+                  </VBox>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#setPersonnageArcher">
+               <graphic>
+                  <VBox alignment="CENTER" style="-fx-background-color: GRAY;">
+                        <Label text="Archer"/>
+                      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                          <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                          </VBox.margin>
+                          <Image url="@../image/archer.png"/>
+                      </ImageView>
+                        <TextArea fx:id="labelarcher" editable="false" wrapText="true">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                           </VBox.margin>
+                        </TextArea>
+                  </VBox>
+               </graphic>
+            </Button>
+      </HBox>
+      <HBox alignment="CENTER">
+         <Label text="Choix du nom de combattant : "/>
+         <Label fx:id="labelpseudo" style="-fx-font-weight: bold;"/>
+      </HBox>
+      <TextField fx:id="inputpseudo">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </VBox.margin>
+      </TextField>
+      <Label text="Position du combattant à l'arrivee sur le champ de bataille : (default : 0)" textAlignment="CENTER"/>
+      <HBox alignment="CENTER">
+         <RadioButton fx:id="radio5" onAction="#positionselect" text="5" textFill="WHITE">
+            <HBox.margin>
+               <Insets right="10.0"/>
+            </HBox.margin>
+         </RadioButton>
+         <RadioButton fx:id="radio4" onAction="#positionselect" text="4" textFill="WHITE">
+            <HBox.margin>
+               <Insets right="10.0"/>
+            </HBox.margin>
+         </RadioButton>
+         <RadioButton fx:id="radio3" onAction="#positionselect" text="3" textFill="WHITE">
+            <HBox.margin>
+               <Insets right="10.0"/>
+            </HBox.margin>
+         </RadioButton>
+         <RadioButton fx:id="radio2" onAction="#positionselect" text="2" textFill="WHITE">
+            <HBox.margin>
+               <Insets right="10.0"/>
+            </HBox.margin>
+         </RadioButton>
+         <RadioButton fx:id="radio1" onAction="#positionselect" text="1" textFill="WHITE">
+            <HBox.margin>
+               <Insets right="10.0"/>
+            </HBox.margin>
+         </RadioButton>
+         <RadioButton fx:id="radio0" onAction="#positionselect" text="0" textFill="WHITE">
+            <HBox.margin>
+               <Insets right="10.0"/>
+            </HBox.margin>
+         </RadioButton>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </padding>
+      </HBox>
+      <Button defaultButton="true" mnemonicParsing="false" onAction="#valider" style="-fx-background-color: DARKORANGE;"
+              text="Valider"/>
+</VBox>

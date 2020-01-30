@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:id="vboxback" alignment="CENTER" xmlns="http://javafx.com/javafx"
+      fx:controller="view.FenetreResultat">
+      <Label text="Votre partie est terminée !!!" textAlignment="CENTER" textFill="#e8c705">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </VBox.margin>
+         <font>
+            <Font size="18.0"/>
+         </font>
+      </Label>
+      <HBox alignment="CENTER">
+            <VBox alignment="CENTER">
+                  <HBox alignment="CENTER">
+                        <Label text="Pseudo :">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="textpseudo" editable="false"/>
+                     <opaqueInsets>
+                        <Insets/>
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                        <Label text="Nombre de vague :">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="textnbvague" editable="false"/>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                        <Label text="Nombre de tour :">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="textnbtour" editable="false"/>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                        <Label text="Temps de la partie (en secondes) :">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="texttemps" editable="false"/>
+                  </HBox>
+                  <Button mnemonicParsing="false" style="-fx-background-color: DARKCYAN;"
+                          text="Sauvegarder votre score" onAction="#saveJoueur" fx:id="boutonSave">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                     </VBox.margin>
+                  </Button>
+            </VBox>
+            <HBox>
+               <VBox>
+                  <Label text="Pseudo :"></Label>
+                  <ListView fx:id="listViewJoueur"/>
+               </VBox>
+               <VBox>
+                  <Label text="Nombre de vague :"></Label>
+                  <ListView items="${listViewJoueur.items}" fx:id="listeViewJoueurVague"/>
+               </VBox>
+               <VBox>
+                  <Label text="Nombre de tour :"></Label>
+                  <ListView items="${listViewJoueur.items}" fx:id="listeViewJoueurNbtour"/>
+               </VBox>
+                <VBox>
+                    <Label text="Temps de jeux:"></Label>
+                    <ListView items="${listViewJoueur.items}" fx:id="listeViewJoueurTempsJ"/>
+                </VBox>
+            </HBox>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#accueil" style="-fx-background-color: LIMEGREEN;"
+              text="Retourner à l'accueil">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </VBox.margin>
+      </Button>
+</VBox>
